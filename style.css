@@ -10,6 +10,11 @@
   --gray-medium: hsl(0deg, 0%, 40%);
   --gray-light: hsl(0deg, 0%, 60%);
   --gray-white: hsl(0deg, 0%, 100%);
+
+  --font-size-1: 1rem;
+  --font-size-1-25: 1.25rem;
+  --font-size-1-5: 1.5rem;
+  --font-size-2: 2rem;
 }
 
 * {
@@ -21,4 +26,71 @@ html,
 body {
   margin: 0;
   padding: 0;
+}
+
+/* Tag styles */
+p {
+  font-size: var(--font-size-1-25);
+  margin-block: 0px 16px;
+}
+
+/* According to figma, the p in card has a different font-weight */
+.card p {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: var(--font-size-2);
+  font-weight: 800;
+  margin-block-end: 48px;
+  margin-block-start: 96px;
+}
+
+h2 {
+  font-size: var(--font-size-1-5);
+  font-weight: 800;
+}
+
+strong {
+  color: var(--primary);
+}
+
+main {
+  background-color: var(--gray-medium);
+  border-block-start: solid 8px var(--gray-light);
+  padding-block: 66px;
+  padding-block-end: 58px;
+  margin-block-start: 64px;
+}
+
+/* Class styles */
+.intro-chunk {
+  max-width: 448px;
+}
+
+.max-width-wrapper {
+  max-width: 800px;
+  padding-inline: 24px;
+  margin: auto;
+}
+
+/* Max width wrapper had no padding inside main */
+main .max-width-wrapper {
+  padding: 0px;
+}
+
+.card {
+  background-color: var(--gray-white);
+  border-block-end: solid 8px var(--gray-light);
+  padding: 8px 24px;
+}
+
+.indented-heading {
+  background-color: var(--secondary-light);
+  border-block-end: solid 8px var(--secondary-dark);
+  width: fit-content;
+  padding: 16px 32px;
+  margin: 0px;
+  margin-inline-start: -32px;
+  margin-block-end: 16px;
 }
