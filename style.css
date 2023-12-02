@@ -55,6 +55,7 @@ strong {
   color: var(--primary);
 }
 
+/* odd padding values required to match design */
 main {
   background-color: var(--gray-medium);
   border-block-start: solid 8px var(--gray-light);
